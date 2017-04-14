@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title>css3</title>
+		<style>
+			#lbt h2{
+				color:blue;
+				text-align:center;
+			}
+			img{
+				margin-left:480px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>
+				<center>
+					向昕哲的css3
+				</center>
+			</h1>
+		</header>
+		<div id="lbt">
+			<h2>向昕哲的轮播图</h2>
+			<img id="lunbo" src="./img/pig5.jpg" width="160px" height="80px"/>
+		</div>
+	</body>
+	<script>
+		var lunBoTu;
+		lunBoTu = document.getElementById("lunbo");
+		var m;
+		m = 0;
+		function fun(){
+			m++;
+			lunBoTu.src = "./img/pig" + m + ".jpg";
+			if(m > 6){
+				m = 0;
+			}
+		}
+		setInterval(fun, 3000);
+	</script>
+</html>
